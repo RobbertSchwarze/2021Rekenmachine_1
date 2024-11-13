@@ -10,6 +10,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.jetbrains.annotations.NotNull;
 
 import static javafx.scene.input.KeyEvent.KEY_PRESSED;
 import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
@@ -34,14 +35,14 @@ public class JavaFXApp extends Application {
     }
 
     protected int computeMultiply (int number1, int number2) {
-        return 0;
+        return number1 * number2;
     }
 
     protected int computeDivide (int number1, int number2) {
         return 0;
     }
 
-    private void compute (String operator) {
+    private void compute (@NotNull String operator) {
 
         int result;
         int number1 = getNumberFromTextField (txtNumber1);
